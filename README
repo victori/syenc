@@ -1,0 +1,24 @@
+
+SYEnc
+==========
+
+SYEnc is a Scala decoder for the <a href="http://www.yenc.org/">yEnc format</a> that is based on Alex Russ's Java yEnc Decoder. SYEnc was designed to be used as a library by applications needing to use yEnc to decode data. It should be thread-safe, so don't worry about using it in a threaded context.
+  
+Use
+---
+
+import com.base.SYEnc
+import java.io._
+val baos = new ByteArrayOutputStream
+SYEnc.decode(new ByteArrayInputStream(stringFromStream.getBytes("UTF-8")), baos)
+println(baos.toString)
+
+SYEnc requires java 5 and ant 1.7.
+
+Building from source is easy:
+
+    $ ant jar
+    
+Scala libraries and dependencies are included for building.
+
+Victor Igumnov <victori@fabulously40.com>
