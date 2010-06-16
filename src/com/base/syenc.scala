@@ -37,7 +37,7 @@ object SYEnc {
     /**length of the buffer thst's caching the writes */
     var bufferLength = 0
 
-    val streamReader = new BufferedReader(new InputStreamReader(is, "UTF-8"))
+    val streamReader = new BufferedReader(new RawInputStreamReader(is, "UTF-8"))
 
     /* Get initial parameters */
     var line = streamReader.readLine
